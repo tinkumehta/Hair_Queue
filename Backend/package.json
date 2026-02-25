@@ -14,21 +14,24 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "axios": "^1.13.2",
     "bcrypt": "^6.0.0",
-    "cloudinary": "^2.9.0",
+    "cloudinary": "^2.8.0",
     "cookie-parser": "^1.4.7",
-    "cors": "^2.8.6",
-    "dotenv": "^17.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "dotevn": "^0.0.1-security",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.2.2",
+    "mongoose": "^9.0.1",
     "mongoose-aggregate-paginate-v2": "^1.1.4",
     "multer": "^2.0.2",
     "nanoid": "^5.1.6",
     "node-cache": "^5.1.2",
-    "resend": "^6.9.2"
+    "resend": "^6.7.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.11",
+    "prettier": "^3.7.4"
   }
 }
