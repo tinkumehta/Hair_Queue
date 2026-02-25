@@ -55,12 +55,25 @@ const registerUser = asyncHandler (async (req, res) => {
     // if (!avatar) {
     //     throw new ApiError(404, "Avatar file uploa failed")
     // }
-    let avatarImageLocalPath;
-    if (req.files && Array.isArray(req.files.avatar) && req.files.avatar.length > 0){
-        avatarImageLocalPath = req.files.avatar[0].path
-    }
 
-    const avatar = await uploadOnCloudinary(avatarImageLocalPath);
+    // 25-02-2026
+    // let avatarImageLocalPath;
+    // if (req.files && Array.isArray(req.files.avatar) && req.files.avatar.length > 0){
+    //     avatarImageLocalPath = req.files.avatar[0].path
+    // }
+
+    // const avatar = await uploadOnCloudinary(avatarImageLocalPath);
+
+     let avatarUrl = "";
+
+if (req.file) {
+  const avatarUpload = await uploadOnCloudinary(
+    req.file.buffer,
+    "devconnect"
+  );
+
+  avatarUrl = avatarUpload?.secure_url;
+}
 
     const otp = generateOtp();
 
@@ -69,7 +82,7 @@ const registerUser = asyncHandler (async (req, res) => {
         fullName,
         email,
         username,
-        avatar: avatar?.url || "",
+        avatar: avatarUrl || "",
         password,
         phone,
         role: role || 'user',
