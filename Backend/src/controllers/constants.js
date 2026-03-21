@@ -1,1 +1,1 @@
-export const DB_NAME = "TestBackend"
+export const DB_NAME = "HairQueue"
