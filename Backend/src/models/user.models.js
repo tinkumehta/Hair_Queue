@@ -7,24 +7,27 @@ const userSchema = new Schema(
     fullName: {
       type: String,
       required: true,
-      trim: true
+      trim: true,
+       match: /^[A-Za-z\s]+$/
     },
     username: {
       type: String,
       required: true,
       trim: true,
-      unique: true
+      unique: true,
+      match: /^[a-zA-Z0-9_]+$/
     },
     email: {
       type: String,
       required: true,
       unique: true,
-      lowercase: true
+      lowercase: true,
+      match: /^\S+@\S+\.\S+$/
     },
     password: {
       type: String,
       required: true,
-      minlength: 8,
+      minlength: 6,
       
     },
     avatar: {
@@ -37,7 +40,8 @@ const userSchema = new Schema(
       default: 'user'
     },
     phone: {
-      type: String
+      type: String,
+       match: /^[6-9]\d{9}$/ // Indian numbers
     },
     emailVerified : {
       type : Boolean,

@@ -9,11 +9,14 @@ import {
  import { upload } from "../middlewares/multer.middlewares.js";
  import { verfiyJWT } from "../middlewares/auth.middlewares.js";
  import { Router } from "express";
+ import { validateRequest, registerValidation } from "../middlewares/validtionRequestion.middlewares.js";
 
  const router = Router();
 
  router.route("/register").post(
     upload.single('avatar'),
+   registerValidation,
+   validateRequest,
     registerUser
  )
 
