@@ -439,7 +439,7 @@ const ShopDetail = () => {
                         </p>
                       </div>
                       <div className="text-right">
-                        <p className="text-xl font-bold text-gray-900">${service.price}</p>
+                        <p className="text-xl font-bold text-gray-900">₹{service.price}</p>
                         {selectedService?.name === service.name && (
                           <p className="text-sm text-blue-600 mt-1">Selected</p>
                         )}
@@ -552,7 +552,7 @@ const ShopDetail = () => {
                           {item.customer?._id === user?._id ? 'You' : `Customer ${index + 1}`}
                         </p>
                         <p className="text-sm text-gray-600">
-                          {item.service?.name} - ${item.service?.price}
+                          {item.service?.name} - ₹{item.service?.price}
                         </p>
                       </div>
                       <div className="text-right">
@@ -727,7 +727,7 @@ const ShopDetail = () => {
                         </p>
                       </div>
                       <div className="text-right">
-                        <p className="text-lg font-bold text-gray-900">${service.price}</p>
+                        <p className="text-lg font-bold text-gray-900">₹{service.price}</p>
                         {selectedService?.name === service.name && (
                           <p className="text-sm text-blue-600">Selected</p>
                         )}

@@ -152,7 +152,7 @@ const Dashboard = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-500">Average Price</p>
-                <p className="text-3xl font-bold text-gray-900">$25</p>
+                <p className="text-3xl font-bold text-gray-900">₹50</p>
               </div>
               <div className="p-3 bg-yellow-100 rounded-lg">
                 <FaDollarSign className="h-6 w-6 text-yellow-600" />

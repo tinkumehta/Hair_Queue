@@ -595,7 +595,7 @@ const ShopList = () => {
                             {shop.services?.slice(0, 2).map((service, index) => (
                               <div key={index} className="flex justify-between items-center text-sm">
                                 <span className="text-gray-600 truncate">{service.name}</span>
-                                <span className="font-semibold text-gray-900">${service.price}</span>
+                                <span className="font-semibold text-gray-900">₹{service.price}</span>
                               </div>
                             ))}
                             {shop.services?.length > 2 && (
