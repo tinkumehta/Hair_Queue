@@ -1,5 +1,6 @@
 # Hair_Queue
 A full-stack web application for managing queues in a hair salon. This project provides a digital solution for customers to join a queue and for salon staff to manage appointments efficiently.
+[Web Site](https://hair-queue-gl8z.vercel.app)
 
 ## 📋 About
 Hair_Queue is built to streamline the check-in process for hair salons. It consists of a backend API (likely built with Node.js) and a frontend client (likely built with React or a similar framework) to handle real-time queue updates and user management. The project eliminates the need for physical waiting lists by digitizing the queue.
